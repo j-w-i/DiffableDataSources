@@ -6,6 +6,7 @@ import DifferenceKit
 /// A class for backporting `UICollectionViewDiffableDataSource` introduced in iOS 13.0+, tvOS 13.0+.
 /// Represents the data model object for `UICollectionView` that can be applies the
 /// changes with automatic diffing.
+@available(iOS, introduced: 6.0)
 open class CollectionViewDiffableDataSource<SectionIdentifierType: Hashable, ItemIdentifierType: Hashable>: NSObject, UICollectionViewDataSource {
     /// The type of closure providing the cell.
     public typealias CellProvider = (UICollectionView, IndexPath, ItemIdentifierType) -> UICollectionViewCell?
